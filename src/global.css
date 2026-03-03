@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  /* ─── Cyber Pro Theme ──────────────────────────────── */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  /* New Highlight / Accent color for secondary branding */
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: 0.75rem;
+  --radius-md: calc(var(--radius-lg) - 2px);
+  --radius-sm: calc(var(--radius-lg) - 4px);
+
+  /* Animation Overrides */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Tactical Typography */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  :root {
+    --background: oklch(12% 0.02 250);
+    /* Deep Space */
+    --foreground: oklch(98% 0.01 250);
+    /* Snow White */
+
+    --card: oklch(100% 0 0 / 2%);
+    --card-foreground: oklch(98% 0.01 250);
+
+    --popover: oklch(12% 0.02 250);
+    --popover-foreground: oklch(98% 0.01 250);
+
+    --primary: oklch(65% 0.25 300);
+    /* Neon Violet */
+    --primary-foreground: oklch(100% 0 0);
+
+    --secondary: oklch(25% 0.02 250);
+    --secondary-foreground: oklch(98% 0.01 250);
+
+    --accent: oklch(75% 0.2 180);
+    /* Cyber Cyan / Mint */
+    --accent-foreground: oklch(12% 0.02 250);
+
+    --muted: oklch(25% 0.02 250);
+    --muted-foreground: oklch(65% 0.02 250);
+
+    --destructive: oklch(60% 0.22 25);
+    --destructive-foreground: oklch(98% 0.01 250);
+
+    --border: oklch(100% 0 0 / 10%);
+    --input: oklch(100% 0 0 / 10%);
+    --ring: oklch(65% 0.25 300 / 40%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border/50 outline-ring/30 transition-colors duration-200;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/30 font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    letter-spacing: -0.01em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-black italic tracking-tighter text-white uppercase;
+  }
+
+  code,
+  pre {
+    @apply font-mono;
+  }
+}
+
+/* ─── Cyber Utilities ────────────────────────────── */
+@layer utilities {
+  .glass {
+    @apply bg-white/[0.03] backdrop-blur-md border border-white/10;
+  }
+
+  .glass-card {
+    @apply bg-card backdrop-blur-3xl border border-white/[0.08] shadow-2xl;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px var(--primary);
+  }
+}
