@@ -7,11 +7,9 @@ import {
     LuPlus,
     LuEraser,
     LuBuilding,
-    LuActivity,
     LuHistory,
     LuGlobe
 } from "@qwikest/icons/lucide";
-import { cn } from "../../../utils/cn";
 import { GeneralAccountModal } from "./GeneralAccountModal";
 
 export const AccountRegistry = component$(() => {

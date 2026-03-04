@@ -8,7 +8,6 @@ import {
     LuUser,
     LuLock,
     LuShield,
-    LuActivity,
     LuMoreVertical,
     LuHistory,
     LuUserPlus,

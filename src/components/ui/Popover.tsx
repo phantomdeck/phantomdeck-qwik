@@ -1,4 +1,4 @@
-import { component$, Slot, type PropsOf, useSignal, $ } from "@builder.io/qwik";
+import { component$, Slot, type PropsOf } from "@builder.io/qwik";
 import { cn } from "../../utils/cn";
 
 /**

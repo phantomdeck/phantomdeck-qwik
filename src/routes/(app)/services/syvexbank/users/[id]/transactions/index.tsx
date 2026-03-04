@@ -2,9 +2,7 @@ import { component$, useResource$, Resource, $, useSignal } from "@builder.io/qw
 import { useLocation, Link, type DocumentHead } from "@builder.io/qwik-city";
 import { getBankUser, getBankTransactions, deleteBankTransaction } from "~/services/syvexbank/handlers/index";
 import {
-    LuHistory,
     LuRefreshCw,
-    LuArrowLeft,
     LuPlus,
     LuEraser,
     LuChevronRight,
@@ -18,7 +16,7 @@ import { cn } from "~/utils/cn";
 import { Badge } from "~/components/ui/Badge";
 import { Button } from "~/components/ui/Button";
 import { TransactionModal } from "~/services/syvexbank/ui/TransactionModal";
-import type { BankTransaction, BankUser } from "~/services/syvexbank/types";
+import type { BankTransaction } from "~/services/syvexbank/types";
 
 export default component$(() => {
     const loc = useLocation();

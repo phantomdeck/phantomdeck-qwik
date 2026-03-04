@@ -1,4 +1,4 @@
-import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import { component$, useVisibleTask$ } from "@builder.io/qwik";
 import { Form, routeAction$, zod$, z, type DocumentHead } from "@builder.io/qwik-city";
 import { createSupabaseServerClient } from "../../lib/supabase/server";
 import {
@@ -23,7 +23,7 @@ import { LuShield, LuRocket, LuActivity } from "@qwikest/icons/lucide";
 export const useLoginAction = routeAction$(async (data, event) => {
     const supabase = createSupabaseServerClient(event);
 
-    const { data: authData, error } = await supabase.auth.signInWithPassword({
+    const { error } = await supabase.auth.signInWithPassword({
         email: data.email,
         password: data.password,
     });
@@ -49,6 +49,7 @@ export default component$(() => {
     // ─── CLIENT-SIDE REDIRECT ───
     // This handles the transition after the action is successful
     // Better for mobile cookie persistence on non-localhost IP access
+    // eslint-disable-next-line qwik/no-use-visible-task
     useVisibleTask$(({ track }) => {
         const result = track(() => loginAction.value);
         if (result?.success) {

@@ -21,8 +21,9 @@ export interface RadioGroupStore {
 
 export const RadioGroupContext = createContextId<RadioGroupStore>('radio-group-context');
 
-export const RadioGroup = component$<PropsOf<"div"> & { defaultValue?: string, value?: string, onValueChange$?: (val: string) => void }>(
-    ({ defaultValue, value, onValueChange$, ...props }) => {
+export const RadioGroup = component$<Omit<PropsOf<"div">, "onValueChange$"> & { defaultValue?: string, value?: string, onValueChange$?: (val: string) => void }>(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    ({ defaultValue, value, onValueChange$: _onValueChange$, ...props }) => {
         // We use a store for shared choice state
         const state = useStore<RadioGroupStore>({ value: value || defaultValue });
         useContextProvider(RadioGroupContext, state);

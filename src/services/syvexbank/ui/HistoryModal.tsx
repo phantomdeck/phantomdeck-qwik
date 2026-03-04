@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, type QRL } from "@builder.io/qwik";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../../../components/ui/Dialog";
 import { TransactionHistory } from "./TransactionHistory";
 import type { BankUser } from "../types";
@@ -6,7 +6,7 @@ import type { BankUser } from "../types";
 interface HistoryModalProps {
     show: boolean;
     user: BankUser | null;
-    onClose$: () => void;
+    onClose$: QRL<() => void>;
 }
 
 export const HistoryModal = component$<HistoryModalProps>(({ show, user, onClose$ }) => {

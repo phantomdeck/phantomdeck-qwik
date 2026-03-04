@@ -1,14 +1,14 @@
-import { component$, useSignal, $ } from "@builder.io/qwik";
+import { component$, useSignal, $, type QRL } from "@builder.io/qwik";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "../../../components/ui/Dialog";
 import { createBankAccount } from "../handlers/index";
-import { LuX, LuSave, LuBuilding, LuActivity } from "@qwikest/icons/lucide";
+import { LuSave, LuBuilding, LuActivity } from "@qwikest/icons/lucide";
 import { Button } from "../../../components/ui/Button";
 import { Input } from "../../../components/ui/Input";
 
 interface GeneralAccountModalProps {
     show: boolean;
-    onClose$: () => void;
-    onSuccess$: () => void;
+    onClose$: QRL<() => void>;
+    onSuccess$: QRL<() => void>;
 }
 
 export const GeneralAccountModal = component$<GeneralAccountModalProps>(({ show, onClose$, onSuccess$ }) => {

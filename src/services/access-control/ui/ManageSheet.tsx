@@ -1,13 +1,12 @@
 import { component$, useSignal, useTask$, type Signal, $ } from "@builder.io/qwik";
 import { server$ } from "@builder.io/qwik-city";
 import { Sheet, SheetHeader, SheetTitle, SheetDescription, SheetContent, SheetFooter } from "../../../components/ui/Sheet";
-import type { AuthUser, UserServiceAccess, ServiceAccessLevel, BillingStatus } from "../../../types/auth";
+import type { AuthUser, UserServiceAccess, BillingStatus } from "../../../types/auth";
 import { safeServices } from "../../config";
 import { adminAuth } from "../../../lib/supabase/admin";
 import {
     LuUser,
     LuShield,
-    LuCrown,
     LuSave,
     LuGhost,
 } from "@qwikest/icons/lucide";

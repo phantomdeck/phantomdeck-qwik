@@ -1,0 +1,203 @@
+$ eslint "src/**/*.ts*"
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/components/ui/Checkbox.tsx
+  24:30  error  When referencing "props" inside a different scope (onClick$), Qwik needs to serialize the value, however it is an instance of the "props" class, which is not serializable.
+Check out https://qwik.dev/docs/advanced/dollar/ for more details  qwik/valid-lexical-scope
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/components/ui/Dialog.tsx
+   1:53  error    'useTask$' is defined but never used                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  23:9   warning  useVisibleTask$() runs eagerly and blocks the main thread, preventing user interaction until the task is finished. Consider using useTask$(), useOn(), useOnDocument(), or useOnWindow() instead. If you have to use a useVisibleTask$(), you can disable the warning with a '// eslint-disable-next-line qwik/no-use-visible-task' comment  qwik/no-use-visible-task
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/components/ui/InputOTP.tsx
+   1:63  error  '$' is defined but never used                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+  25:17  error  When referencing "onComplete$" inside a different scope (useTask$), Qwik needs to serialize the value, however it is a function, which is not serializable.
+Check out https://qwik.dev/docs/advanced/dollar/ for more details  qwik/valid-lexical-scope
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/components/ui/Popover.tsx
+  1:42  error  'useSignal' is defined but never used  @typescript-eslint/no-unused-vars
+  1:53  error  '$' is defined but never used          @typescript-eslint/no-unused-vars
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/components/ui/RadioGroup.tsx
+  25:29  error  'onValueChange$' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/components/ui/Sheet.tsx
+   1:53  error    'useTask$' is defined but never used                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  29:9   warning  useVisibleTask$() runs eagerly and blocks the main thread, preventing user interaction until the task is finished. Consider using useTask$(), useOn(), useOnDocument(), or useOnWindow() instead. If you have to use a useVisibleTask$(), you can disable the warning with a '// eslint-disable-next-line qwik/no-use-visible-task' comment  qwik/no-use-visible-task
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/components/ui/Switch.tsx
+  24:30  error  When referencing "props" inside a different scope (onClick$), Qwik needs to serialize the value, however it is an instance of the "props" class, which is not serializable.
+Check out https://qwik.dev/docs/advanced/dollar/ for more details  qwik/valid-lexical-scope
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/routes/(app)/index.tsx
+   5:5  error  'LuLayers' is defined but never used       @typescript-eslint/no-unused-vars
+   6:5  error  'LuSignal' is defined but never used       @typescript-eslint/no-unused-vars
+  12:5  error  'LuFingerprint' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/routes/(app)/services/syvexbank/users/[id]/transactions/index.tsx
+   5:5   error  'LuHistory' is defined but never used    @typescript-eslint/no-unused-vars
+   7:5   error  'LuArrowLeft' is defined but never used  @typescript-eslint/no-unused-vars
+  21:32  error  'BankUser' is defined but never used     @typescript-eslint/no-unused-vars
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/routes/login/index.tsx
+   1:22  error    'useSignal' is defined but never used                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  26:19  error    'authData' is assigned a value but never used                                                                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+  52:5   warning  useVisibleTask$() runs eagerly and blocks the main thread, preventing user interaction until the task is finished. Consider using useTask$(), useOn(), useOnDocument(), or useOnWindow() instead. If you have to use a useVisibleTask$(), you can disable the warning with a '// eslint-disable-next-line qwik/no-use-visible-task' comment  qwik/no-use-visible-task
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/routes/ui-gallery/index.tsx
+   9:5  error  'CardFooter' is defined but never used    @typescript-eslint/no-unused-vars
+  10:5  error  'CardAction' is defined but never used    @typescript-eslint/no-unused-vars
+  58:5  error  'LuPlus' is defined but never used        @typescript-eslint/no-unused-vars
+  60:5  error  'LuArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+  62:5  error  'LuCpu' is defined but never used         @typescript-eslint/no-unused-vars
+  63:5  error  'LuDatabase' is defined but never used    @typescript-eslint/no-unused-vars
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/services/access-control/ui/InviteModal.tsx
+   1:49  error  'useTask$' is defined but never used           @typescript-eslint/no-unused-vars
+   4:5   error  'DialogHeader' is defined but never used       @typescript-eslint/no-unused-vars
+   5:5   error  'DialogTitle' is defined but never used        @typescript-eslint/no-unused-vars
+   6:5   error  'DialogDescription' is defined but never used  @typescript-eslint/no-unused-vars
+  11:10  error  'Field' is defined but never used              @typescript-eslint/no-unused-vars
+  11:17  error  'FieldLabel' is defined but never used         @typescript-eslint/no-unused-vars
+  12:54  error  'LuX' is defined but never used                @typescript-eslint/no-unused-vars
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/services/access-control/ui/ManageSheet.tsx
+   4:44  error  'ServiceAccessLevel' is defined but never used  @typescript-eslint/no-unused-vars
+  10:5   error  'LuCrown' is defined but never used             @typescript-eslint/no-unused-vars
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/services/syvexbank/ui/AccountRegistry.tsx
+  10:5   error  'LuActivity' is defined but never used  @typescript-eslint/no-unused-vars
+  14:10  error  'cn' is defined but never used          @typescript-eslint/no-unused-vars
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/services/syvexbank/ui/GeneralAccountModal.tsx
+    4:10  error  'LuX' is defined but never used                                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+   34:13  error  When referencing "onSuccess$" inside a different scope ($), Qwik needs to serialize the value, however it is a function, which is not serializable.
+Did you mean to wrap it in `$()`?
+
+const onSuccess$ = $(
+  () => void
+);
+.
+Check out https://qwik.dev/docs/advanced/dollar/ for more details  qwik/valid-lexical-scope
+   35:13  error  When referencing "onClose$" inside a different scope ($), Qwik needs to serialize the value, however it is a function, which is not serializable.
+Did you mean to wrap it in `$()`?
+
+const onClose$ = $(
+  () => void
+);
+.
+Check out https://qwik.dev/docs/advanced/dollar/ for more details      qwik/valid-lexical-scope
+   44:39  error  Using "onClose$" as an event handler, however functions are not serializable.
+Did you mean to wrap it in `$()`?
+
+const onClose$ = $(
+  () => void
+);
+
+Check out https://qwik.dev/docs/advanced/dollar/ for more details                                                                           qwik/valid-lexical-scope
+  101:51  error  Using "onClose$" as an event handler, however functions are not serializable.
+Did you mean to wrap it in `$()`?
+
+const onClose$ = $(
+  () => void
+);
+
+Check out https://qwik.dev/docs/advanced/dollar/ for more details                                                                           qwik/valid-lexical-scope
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/services/syvexbank/ui/HistoryModal.tsx
+  14:39  error  Using "onClose$" as an event handler, however functions are not serializable.
+Did you mean to wrap it in `$()`?
+
+const onClose$ = $(
+  () => void
+);
+
+Check out https://qwik.dev/docs/advanced/dollar/ for more details  qwik/valid-lexical-scope
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/services/syvexbank/ui/TransactionHistory.tsx
+  1:22  error  'useSignal' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/services/syvexbank/ui/TransactionModal.tsx
+   10:5   error    'LuMail' is defined but never used                                                                                                                                                                                                                                                                                                           @typescript-eslint/no-unused-vars
+   11:5   error    'LuGlobe' is defined but never used                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+   12:5   error    'LuBuilding2' is defined but never used                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+   13:5   error    'LuCreditCard' is defined but never used                                                                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+   74:5   warning  useVisibleTask$() runs eagerly and blocks the main thread, preventing user interaction until the task is finished. Consider using useTask$(), useOn(), useOnDocument(), or useOnWindow() instead. If you have to use a useVisibleTask$(), you can disable the warning with a '// eslint-disable-next-line qwik/no-use-visible-task' comment  qwik/no-use-visible-task
+  191:13  error    When referencing "onSuccess$" inside a different scope ($), Qwik needs to serialize the value, however it is a function, which is not serializable.
+Did you mean to wrap it in `$()`?
+
+const onSuccess$ = $(
+  () => void
+);
+.
+Check out https://qwik.dev/docs/advanced/dollar/ for more details                                             qwik/valid-lexical-scope
+  192:13  error    When referencing "onClose$" inside a different scope ($), Qwik needs to serialize the value, however it is a function, which is not serializable.
+Did you mean to wrap it in `$()`?
+
+const onClose$ = $(
+  () => void
+);
+.
+Check out https://qwik.dev/docs/advanced/dollar/ for more details                                                 qwik/valid-lexical-scope
+  204:39  error    Using "onClose$" as an event handler, however functions are not serializable.
+Did you mean to wrap it in `$()`?
+
+const onClose$ = $(
+  () => void
+);
+
+Check out https://qwik.dev/docs/advanced/dollar/ for more details                                                                                                                      qwik/valid-lexical-scope
+  404:39  error    Using "onClose$" as an event handler, however functions are not serializable.
+Did you mean to wrap it in `$()`?
+
+const onClose$ = $(
+  () => void
+);
+
+Check out https://qwik.dev/docs/advanced/dollar/ for more details                                                                                                                      qwik/valid-lexical-scope
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/services/syvexbank/ui/UserModal.tsx
+    1:51  error  'Signal' is defined but never used                                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+    4:10  error  'getBankUsers' is defined but never used                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+    6:18  error  'LuMail' is defined but never used                                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+    6:26  error  'LuMapPin' is defined but never used                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+    6:44  error  'LuGlobe' is defined but never used                                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+    9:10  error  'Checkbox' is defined but never used                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+   78:13  error  When referencing "onSuccess$" inside a different scope ($), Qwik needs to serialize the value, however it is a function, which is not serializable.
+Did you mean to wrap it in `$()`?
+
+const onSuccess$ = $(
+  () => void
+);
+.
+Check out https://qwik.dev/docs/advanced/dollar/ for more details  qwik/valid-lexical-scope
+   79:13  error  When referencing "onClose$" inside a different scope ($), Qwik needs to serialize the value, however it is a function, which is not serializable.
+Did you mean to wrap it in `$()`?
+
+const onClose$ = $(
+  () => void
+);
+.
+Check out https://qwik.dev/docs/advanced/dollar/ for more details      qwik/valid-lexical-scope
+   90:38  error  Using "onClose$" as an event handler, however functions are not serializable.
+Did you mean to wrap it in `$()`?
+
+const onClose$ = $(
+  () => void
+);
+
+Check out https://qwik.dev/docs/advanced/dollar/ for more details                                                                           qwik/valid-lexical-scope
+  261:35  error  Using "onClose$" as an event handler, however functions are not serializable.
+Did you mean to wrap it in `$()`?
+
+const onClose$ = $(
+  () => void
+);
+
+Check out https://qwik.dev/docs/advanced/dollar/ for more details                                                                           qwik/valid-lexical-scope
+
+/home/kristency/Projects/web/phantomdeck-exe/phantomdeck/src/services/syvexbank/ui/UserRegistry.tsx
+  11:5  error  'LuActivity' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 64 problems (60 errors, 4 warnings)
+
+error: script "lint" exited with code 1

@@ -10,7 +10,7 @@ export interface CheckboxProps extends PropsOf<"input"> {
     checked?: boolean;
 }
 
-export const Checkbox = component$<CheckboxProps>(({ checked, ...props }) => {
+export const Checkbox = component$<CheckboxProps>(({ checked, disabled, class: className, ...props }) => {
     const inputRef = useSignal<HTMLInputElement>();
 
     return (
@@ -18,13 +18,14 @@ export const Checkbox = component$<CheckboxProps>(({ checked, ...props }) => {
             class={cn(
                 "relative flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-white/10 bg-white/[0.03] transition-all hover:border-primary/40",
                 checked && "bg-primary border-primary shadow-[0_0_12px_rgba(var(--primary-rgb),0.2)]",
-                props.disabled && "cursor-not-allowed opacity-50",
-                props.class
+                disabled && "cursor-not-allowed opacity-50",
+                className
             )}
-            onClick$={() => !props.disabled && inputRef.value?.click()}
+            onClick$={() => !disabled && inputRef.value?.click()}
         >
             <input
                 {...props}
+                disabled={disabled}
                 ref={inputRef}
                 type="checkbox"
                 checked={checked}

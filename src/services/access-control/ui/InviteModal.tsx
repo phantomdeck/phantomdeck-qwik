@@ -1,15 +1,12 @@
-import { component$, type Signal, useSignal, $, useTask$ } from "@builder.io/qwik";
+import { component$, type Signal, useSignal, $ } from "@builder.io/qwik";
 import {
     Dialog,
-    DialogHeader,
-    DialogTitle,
-    DialogDescription,
     DialogContent,
 } from "../../../components/ui/Dialog";
 import { Button } from "../../../components/ui/Button";
 import { Input } from "../../../components/ui/Input";
-import { Field, FieldLabel } from "../../../components/ui/Field";
-import { LuSend, LuUserPlus, LuHistory, LuCircleDot, LuX, LuShield } from "@qwikest/icons/lucide";
+// Removed unused imports from Field
+import { LuSend, LuUserPlus, LuHistory, LuCircleDot, LuShield, LuRefreshCw } from "@qwikest/icons/lucide";
 import { safeServices } from "../../config";
 import { Switch } from "../../../components/ui/Switch";
 import { cn } from "../../../utils/cn";

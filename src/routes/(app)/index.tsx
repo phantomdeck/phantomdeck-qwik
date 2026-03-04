@@ -2,14 +2,11 @@ import { component$, useSignal, $ } from "@builder.io/qwik";
 import { routeLoader$, type DocumentHead, Link } from "@builder.io/qwik-city";
 import { safeServices } from "~/services/config";
 import {
-    LuLayers,
-    LuSignal,
     LuActivity,
     LuShieldCheck,
     LuLock,
     LuChevronRight,
     LuBuilding2,
-    LuFingerprint,
 } from "@qwikest/icons/lucide";
 
 import { getUser } from "~/utils/auth-helper";

@@ -1,4 +1,4 @@
-import { component$, useSignal, useStore, $, useVisibleTask$, useTask$ } from "@builder.io/qwik";
+import { component$, useSignal, useStore, $, useVisibleTask$, useTask$, type QRL } from "@builder.io/qwik";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../../../components/ui/Dialog";
 import { Button } from "../../../components/ui/Button";
 import {
@@ -7,10 +7,6 @@ import {
     LuSave,
     LuXCircle,
     LuActivity,
-    LuMail,
-    LuGlobe,
-    LuBuilding2,
-    LuCreditCard
 } from "@qwikest/icons/lucide";
 import type { BankTransaction, BankUser } from "../types";
 import { createBankTransaction, updateBankTransaction } from "../handlers/index";
@@ -20,8 +16,8 @@ interface TransactionModalProps {
     show: boolean;
     user: BankUser | null;
     transaction: BankTransaction | null;
-    onClose$: () => void;
-    onSuccess$: () => void;
+    onClose$: QRL<() => void>;
+    onSuccess$: QRL<() => void>;
 }
 
 const COUNTRIES = [
@@ -71,6 +67,7 @@ export const TransactionModal = component$<TransactionModalProps>(({ show, user,
         created_at: new Date().toISOString().slice(0, 16)
     });
 
+    // eslint-disable-next-line qwik/no-use-visible-task
     useVisibleTask$(({ track }) => {
         track(() => show);
         if (show && user) {

@@ -1,4 +1,4 @@
-import { component$, Slot, type PropsOf, useSignal, useTask$, $, type Signal } from "@builder.io/qwik";
+import { component$, Slot, type PropsOf, useSignal, useTask$, type Signal, type QRL } from "@builder.io/qwik";
 import { cn } from "../../utils/cn";
 
 /**
@@ -10,7 +10,7 @@ import { cn } from "../../utils/cn";
 export interface InputOTPProps extends PropsOf<"div"> {
     maxLength: number;
     value: Signal<string>;
-    onComplete$?: (value: string) => void;
+    onComplete$?: QRL<(value: string) => void>;
 }
 
 export const InputOTP = component$<InputOTPProps>(

@@ -1,4 +1,4 @@
-import { component$, Slot, type PropsOf, useSignal, useTask$, useVisibleTask$, $, type QRL } from "@builder.io/qwik";
+import { component$, Slot, type PropsOf, useSignal, useVisibleTask$, $, type QRL } from "@builder.io/qwik";
 import { cn } from "../../utils/cn";
 import { LuX } from "@qwikest/icons/lucide";
 import { Button } from "./Button";
@@ -26,6 +26,7 @@ export const Sheet = component$<SheetProps & PropsOf<"dialog">>(
 
         // Sync show prop with native <dialog> showModal()
         // useVisibleTask$ ensures this only runs on the client where dialogRef is guaranteed to be a DOM node
+        // eslint-disable-next-line qwik/no-use-visible-task
         useVisibleTask$(({ track }) => {
             const isOpen = track(() => show);
             if (dialogRef.value) {

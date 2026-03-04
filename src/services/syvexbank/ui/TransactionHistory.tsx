@@ -1,4 +1,4 @@
-import { component$, useSignal, useResource$, Resource } from "@builder.io/qwik";
+import { component$, useResource$, Resource } from "@builder.io/qwik";
 import { getBankTransactions } from "../handlers/index";
 import { LuHistory, LuTrendingUp, LuShieldAlert, LuRefreshCw, LuArrowRight } from "@qwikest/icons/lucide";
 import { cn } from "../../../utils/cn";

@@ -1,19 +1,17 @@
-import { component$, useSignal, useTask$, $, type Signal } from "@builder.io/qwik";
+import { component$, useSignal, useTask$, $, type QRL } from "@builder.io/qwik";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from "../../../components/ui/Sheet";
 import { createBankUser, updateBankUser } from "../handlers/index";
-import { getBankUsers } from "../handlers/index";
 import type { BankUser } from "../types";
-import { LuUser, LuMail, LuMapPin, LuLock, LuGlobe, LuShieldAlert, LuSave, LuShieldQuestion, LuActivity } from "@qwikest/icons/lucide";
+import { LuUser, LuLock, LuShieldAlert, LuSave, LuShieldQuestion, LuActivity } from "@qwikest/icons/lucide";
 import { Button } from "../../../components/ui/Button";
 import { Input } from "../../../components/ui/Input";
-import { Checkbox } from "../../../components/ui/Checkbox";
 import { cn } from "../../../utils/cn";
 
 interface UserModalProps {
     show: boolean;
     user: BankUser | null;
-    onClose$: () => void;
-    onSuccess$: () => void;
+    onClose$: QRL<() => void>;
+    onSuccess$: QRL<() => void>;
 }
 
 const blank = () => ({

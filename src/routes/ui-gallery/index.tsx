@@ -5,9 +5,7 @@ import {
     CardHeader,
     CardTitle,
     CardDescription,
-    CardContent,
-    CardFooter,
-    CardAction
+    CardContent
 } from "../../components/ui/Card";
 import {
     Dialog,
@@ -55,12 +53,8 @@ import {
 } from "../../components/ui/Carousel";
 import {
     LuRocket,
-    LuPlus,
     LuActivity,
-    LuArrowRight,
     LuShield,
-    LuCpu,
-    LuDatabase,
     LuSettings,
     LuExternalLink,
     LuLayout,
